@@ -1,3 +1,3 @@
-let pem, pem2, pem12
+let pem
 pem = {};
 

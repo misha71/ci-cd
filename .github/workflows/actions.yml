@@ -11,12 +11,15 @@ jobs:
       matrix:
         node-varsion: [17.x]
     steps:
+      - name: get project
         uses: actions/checkout@v3
-      - name: Starings Node.js ${{ matrix.node-version }}
+      - name: Starings Node.js
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - name: install modules in react
+      - name: install modules
         run: npm install
+      - name: run eslint
+        run: npm run esl
 
 
